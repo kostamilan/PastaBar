@@ -6,13 +6,21 @@ public class pastaBar {
 	}
 	
 	public static int findIngredient(String[] ingredients, String ingredientName) {
-		
-		return 0;
+		for (int i = 0; i < ingredients.length; i++) {
+			if(ingredients[i].equalsIgnoreCase(ingredientName)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 	
 	
 	public static boolean isRegularCustomer(String[] phoneNumbers, String phone) {
-		
+		for (int i = 0; i < phoneNumbers.length; i++) {
+			if (phoneNumbers[i].equals(phone)) {
+				return true;
+			}
+		}
 		return false;
 	}
 
