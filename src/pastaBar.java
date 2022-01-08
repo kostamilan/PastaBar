@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class pastaBar {
 
@@ -7,6 +8,23 @@ public class pastaBar {
 							"Piletina", "4 sira", "Dimljeni sir", "Parmezan", "Pavlaka", "Pesto sos",
 							"Napolitana", "Povrce mix", "Pecurke", "Kutija"};
 		int [] cena = {50, 60 , 120, 120, 140, 100, 100, 100, 80, 50, 80, 80, 80, 50, 50, 20};
+		
+		Scanner s = new Scanner(System.in);	
+		System.out.println("Izvolite !!");
+		
+		String sastojak = " ";
+		double suma = 0;
+		
+		while (!sastojak.equalsIgnoreCase("Poruci")) {
+			System.out.println("Izaberite sastojak za pastu: ");
+			sastojak = s.nextLine();
+		
+			int index = findIngredient(sastojci, sastojak);
+			
+			if (index >= 0) {
+				suma = suma + cena[index];
+			}
+		}
 	}
 	
 	public static int findIngredient(String[] ingredients, String ingredientName) {
