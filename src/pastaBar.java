@@ -25,6 +25,15 @@ public class pastaBar {
 				suma = suma + cena[index];
 			}
 		}
+		System.out.println("Unesite broj telefona: ");
+		String brojTelefona = s.next();
+		isRegularCustomer(stalneMusterije, brojTelefona);
+		if(isRegularCustomer(stalneMusterije, brojTelefona)) {
+			suma = suma * 0.90;
+		}
+		
+		System.out.println("Vasa pasta iznosi " + suma + " rsd.");
+		System.out.println("Prijatno!");
 	}
 	
 	public static int findIngredient(String[] ingredients, String ingredientName) {
